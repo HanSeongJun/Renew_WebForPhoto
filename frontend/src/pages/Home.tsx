@@ -6,18 +6,6 @@ interface WeatherGradeData {
   [regionCode: string]: string;
 }
 
-interface RegionWeatherInfo {
-  regionCode: string;
-  regionName: string;
-  grade: string;
-  temperature?: number;
-  humidity?: number;
-  windSpeed?: number;
-  pm10?: number;
-  pm25?: number;
-  condition?: string;
-}
-
 const Home: React.FC = () => {
   const [weatherData, setWeatherData] = useState<WeatherGradeData>({});
   const [loading, setLoading] = useState(true);
